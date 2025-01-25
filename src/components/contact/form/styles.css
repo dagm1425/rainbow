@@ -1,0 +1,137 @@
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    padding: 5rem 7rem;
+  }
+  
+  .contact-wrapper .contact-item {
+    margin-bottom: 2.5rem;
+  }
+  
+  .contact-wrapper .contact-item p:nth-child(1) {
+    font-weight: 550;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .contact-wrapper .contact-item p:nth-child(2) {
+    line-height: 1.475rem;
+    color: #555;
+  }
+  
+  .contact-wrapper .contact-item a {
+    color: #555;
+    font-weight: normal;
+    text-underline-offset: 0.4rem;
+    text-decoration-thickness: 1px;
+  }
+  
+  .contact-wrapper .contact-item .socials-wrapper {
+    margin-top: 0.925rem;
+  }
+  
+  .contact-wrapper .contact-item .socials-wrapper svg {
+    font-size: 1.375rem;
+    color: #000;
+    margin-right: 0.75rem;
+  }
+  
+  .contact-wrapper .contact-form {
+    width: 50%;
+  }
+  
+  .contact-wrapper .contact-form .user-info {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .contact-wrapper .contact-form .form-group {
+    margin-bottom: 3.5rem;
+    width: 100%;
+  }
+  
+  .contact-wrapper .contact-form .form-group input,
+  .contact-wrapper .contact-form .form-group textarea {
+    font-family: inherit;
+    font-size: 1.125rem;
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    border: none;
+    outline: none;
+    border-bottom: 1.125px solid;
+    border-color: rgba(0, 0, 0, 0.25);
+    transition: border-color 200ms ease-out;
+  }
+  
+  .contact-wrapper .contact-form .form-group input:focus,
+  .contact-wrapper .contact-form .form-group textarea:focus {
+    border-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .contact-wrapper .contact-form .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 550;
+    text-transform: uppercase;
+    margin-bottom: 0.725rem;
+  }
+  
+  .contact-wrapper .contact-form .form-group textarea {
+    resize: none;
+  }
+  
+  .contact-wrapper .snackbar {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    border: 1px solid #000;
+    border-radius: 0.25rem;
+  }
+  
+  .contact-wrapper .snackbar div {
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .contact-wrapper {
+      padding: 3rem 1.5rem;
+      gap: 4rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .contact-wrapper {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 2.5rem 1.25rem;
+    }
+  
+    .contact-wrapper .contact-form {
+      width: 100%;
+    }
+  
+    .contact-wrapper .contact-form .form-group {
+      margin-bottom: 1rem;
+    }
+  
+    .contact-wrapper .contact-form button {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .button {
+    padding: 1rem 2rem;
+    font-size: .85rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    background-color: #0071b8;
+    color: #fff;
+    transition: filter 0.3s ease;
+  }
+  

@@ -1,0 +1,78 @@
+.main-title {
+    width: 30%;
+    font-weight: 550;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  
+  .decorative-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #0071b8;
+    margin-right: 10px; 
+  }
+
+.scroller {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #F5F6F6;
+    padding: 3rem 0;
+  }
+  
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      white 5%,
+      white 95%,
+      transparent
+    );
+    mask: linear-gradient(90deg, transparent, white 5%, white 95%, transparent);
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s)
+      var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  

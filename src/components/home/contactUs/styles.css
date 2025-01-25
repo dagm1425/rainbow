@@ -1,0 +1,48 @@
+.contact-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5.25rem 8rem;
+  }
+  
+  .contact-message {
+    flex: 2;
+    padding-right: 20px;
+  }
+  
+  .contact-message h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    font-weight: 550;
+  }
+  
+  .contact-message p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .contact-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .contact-button a {
+    font-size: 16px;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: #0071b8;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-button a:hover {
+    background-color: #0056b3;
+  }
+  

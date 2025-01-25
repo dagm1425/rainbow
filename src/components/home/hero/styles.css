@@ -1,0 +1,92 @@
+.hero-section {
+  height: 90vh;
+  margin-top: 10vh;
+  background: linear-gradient(90deg, rgba(0,0,0, 0.8) 10%, rgba(0,0,0,0) 45%), url('/images/factory.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding: 0 7%;
+  max-width: 680px;
+}
+
+.hero-title {
+  font-size: 2.65rem;
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: white;
+  margin: 1.5rem 0 2rem;
+  line-height: 1.3;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: .85rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary {
+  background-color: #0071b8;
+  color: #fff;
+  transition: filter 0.3s ease;
+}
+
+.button-primary:hover {
+  filter: brightness(.87);
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .button {
+    width: 100%;
+  }
+}
+
