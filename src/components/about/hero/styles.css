@@ -36,7 +36,7 @@
 }
 
 .about-wrapper .about-main {
-    margin-top: 4.75rem;
+    margin-top: 5rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -46,10 +46,6 @@
 
     .about-wrapper > div:nth-child(2) {
         width: 75%;
-    }
-
-    .about-wrapper .about-main {
-        margin-top: 4rem;
     }
 }
 
