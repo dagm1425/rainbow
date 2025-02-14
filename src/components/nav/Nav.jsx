@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './styles.css';
-import { Link } from 'react-router-dom';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   // Function to close menu when a link is clicked
   const handleLinkClick = () => {
@@ -22,17 +23,29 @@ export default function Nav() {
 
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <li>
-          <Link to="/" className="nav-link active" onClick={handleLinkClick}>
+          <Link 
+            to="/" 
+            className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} 
+            onClick={handleLinkClick}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="/products" className="nav-link" onClick={handleLinkClick}>
+          <Link 
+            to="/products" 
+            className={`nav-link ${location.pathname === '/products' ? 'active' : ''}`} 
+            onClick={handleLinkClick}
+          >
             Products
           </Link>
         </li>
         <li>
-          <Link to="/about" className="nav-link" onClick={handleLinkClick}>
+          <Link 
+            to="/about" 
+            className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} 
+            onClick={handleLinkClick}
+          >
             About Us
           </Link>
         </li>
@@ -40,7 +53,11 @@ export default function Nav() {
           <div className="separator" />
         </li>
         <li>
-          <Link to="/contact" className="template-button" onClick={handleLinkClick}>
+          <Link 
+            to="/contact" 
+            className={`template-button ${location.pathname === '/contact' ? 'active' : ''}`} 
+            onClick={handleLinkClick}
+          >
             Contact Us
           </Link>
         </li>
