@@ -4,7 +4,7 @@ import "./styles.css";
 
 export default function Hero() {
   return (
-    <div className="contact-container">
+    <div className="contact-products-container">
       <Breadcrumb links={["home", "contact"]} />
       <div className="contact-inner">
         <h1>Our Products</h1>

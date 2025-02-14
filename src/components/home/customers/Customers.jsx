@@ -7,7 +7,7 @@ const Customers = () => {
 
     return (
         <div className="scroller" data-direction="right" data-speed="slow" data-animated="true">
-            <h2 className="main-title"><span class="decorative-line"></span>Notable Customers</h2>
+            <h2 className="main-customers-title"><span class="decorative-line"></span>Notable Customers</h2>
             <div className="scroller__inner">
                 {images.map((image, index) => (
                     <img

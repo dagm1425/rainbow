@@ -46,6 +46,11 @@
   }
   
   @media (max-width: 767px) {
+    .features-grid {
+      gap: 19px;
+      padding: 2.5rem;
+    }
+    
     .features-grid-row {
       flex-direction: column;
       align-items: center;

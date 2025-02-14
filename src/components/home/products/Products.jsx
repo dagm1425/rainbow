@@ -25,7 +25,7 @@ const Products = () => {
   return (
     <section className="product-showcase">
       <div className="container">
-        <h2 className="main-title"><span class="decorative-line"></span>Product Categories</h2>
+        <h2 className="main-products-title"><span class="decorative-line"></span>Product Categories</h2>
         <div className="product-grid">
           {products.map((product, index) => {
             const src = product.title.toLowerCase().split(' ').join('-');

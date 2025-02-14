@@ -1,4 +1,4 @@
-.main-title {
+.main-customers-title {
     width: 30%;
     font-weight: 550;
     display: flex;
@@ -76,3 +76,8 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .main-customers-title {
+      width: 75%;
+    }
+  }

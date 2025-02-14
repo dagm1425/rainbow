@@ -23,7 +23,7 @@ const principles = [
 const Principles = () => {
   return (
     <div className="project-features-wrapper">
-      <h2 className="main-title"><span class="decorative-line"></span>Our Guiding Principles</h2>
+      <h2 className="main-principle-title"><span class="decorative-line"></span>Our Guiding Principles</h2>
       <div className="project-features-grid">
         {principles.map((principle, i) => (
           <div key={i} className="project-feature">

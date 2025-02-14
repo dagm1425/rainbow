@@ -1,92 +1,138 @@
+/* Base Navbar Styles */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: white;
+}
 
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop Nav Links */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Nav Link Styling */
+.nav-link {
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+/* Template Button (Contact Us) */
+.template-button {
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  background-color: #0071b8;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.template-button:hover {
+  filter: brightness(0.87);
+}
+
+/* Separator */
+.separator {
+  background-color: #666;
+  width: 1px;
+  height: 1.5rem;
+}
+
+/* Menu Button (Visible on Mobile) */
+.menu-button {
+  display: inline-flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.menu-button:hover {
+  color: #000;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
   .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10vh;
-    padding: 0rem 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    background-color: white;
+    padding: 0 1.5rem;
+    height: 8vh;
   }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-  }
-
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-  
+  /* Full-Screen Mobile Menu */
   .nav-links {
-    display: none;
-    align-items: center;
+    position: fixed;
+    top: 8vh; /* Right below navbar */
+    right: 0;
+    width: 100%;
+    height: 90vh; /* Full viewport height minus navbar */
+    background-color: white;
+    padding: 2rem;
+    flex-direction: column;
     gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-  
-  .nav-link {
-    font-size: 0.85rem;
-    text-decoration: none;
-    color: #666;
-    transition: color 0.2s;
-  }
-  
-  .nav-link:hover {
-    color: #000;
-  }
-  
-  .nav-link.active {
-    color: #000;
-  }
-  
-  .template-button {
-    display: none;
-    /* padding: 0.5rem 1rem; */
-    padding: .75rem 1rem;
-    font-size: .75rem;
-    background-color: #0071b8;
-    color: white;
-    border-radius: 6px;
-    border: none;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: filter 0.3s ease;
-  }
-  
-  .template-button:hover {
-    filter: brightness(.87);
-  }
-  
-  .separator {
-    background-color: #666;
-    width: 1px;
-    min-width: 1px;
-    height: 1.5rem;
-    min-height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%); /* Start fully off-screen */
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 999;
   }
 
-  @media (min-width: 768px) {
-    .nav-links {
-      display: flex;
-    }
-  
-    .template-button {
-      display: inline-flex;
-    }
-  
-    .menu-button {
-      display: none;
-    }
+  /* Slide menu in from right */
+  .nav-links.open {
+    transform: translateX(0);
+    pointer-events: auto;
   }
-  
-  
+
+  /* Increase font size for better visibility on mobile */
+  .nav-links .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* Ensure contact button is visible on mobile */
+  .nav-links .template-button {
+    display: inline-flex;
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop Overrides */
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}

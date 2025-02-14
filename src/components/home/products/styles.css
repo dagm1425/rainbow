@@ -9,7 +9,7 @@
     padding: 0 16px;
   }
 
-  .main-title {
+  .main-products-title {
     width: 32%;
     font-weight: 550;
     display: flex;
@@ -91,5 +91,13 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  @media (max-width: 768px) {
+    .main-products-title {
+      width: 82%;
+    }
+  }
+
+  
   
   

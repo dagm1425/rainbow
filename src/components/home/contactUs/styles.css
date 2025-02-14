@@ -46,3 +46,17 @@
     background-color: #0056b3;
   }
   
+  @media (max-width: 768px) {
+    .contact-us {
+      padding: 4rem 1rem;
+    }
+
+    .contact-message h2 {
+      font-size: 1.7rem;
+    }
+
+    .contact-button a {
+      font-size: 16px;
+      padding: .75rem 1rem;
+    }
+  }

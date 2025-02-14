@@ -1,38 +1,70 @@
+/* Container */
 .stats-container {
-    padding: 3.5rem 3.25rem;
-    background-color: #F5F6F6;
+  padding: 3.5rem 3.25rem;
+  background-color: #F5F6F6;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
 }
 
+/* Stats Layout */
 .stats {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 0 auto;
+  gap: 2rem;
+  max-width: 100%;
+  white-space: nowrap; /* Prevents items from wrapping */
 }
-  
+
+/* Individual Stat Item */
 .stat-item {
   text-align: center;
+  flex: 0 0 auto; /* Ensures items stay the same size */
+  width: 200px; /* Adjust as needed for visibility */
 }
 
+/* Stat Number */
 .stat-number {
   font-size: 2.25rem;
   font-weight: 550;
-  /* color: #0071b8; */
   transition: all 0.3s ease-in-out;
-  margin-bottom: .35rem;
+  margin-bottom: 0.35rem;
 }
 
 .stat-number span {
   font-size: 1.25rem;
   color: #555;
-  margin-left: .75rem;
+  margin-left: 0.75rem;
   position: relative;
   top: -6px;
 }
 
+/* Stat Label */
 .stat-item p {
   font-size: 1rem;
   color: #555;
 }
-  
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .stats-container {
+    padding: 2.5rem 1rem;
+  }
+
+  .stats {
+    overflow-x: auto; /* Allows horizontal scrolling */
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-number span {
+    font-size: 1rem;
+  }
+}
