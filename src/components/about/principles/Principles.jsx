@@ -22,17 +22,23 @@ const principles = [
 
 const Principles = () => {
   return (
-    <div className="project-features-wrapper">
-      <h2 className="main-principle-title"><span class="decorative-line"></span>Our Guiding Principles</h2>
+    <section 
+      className="project-features-wrapper" 
+      aria-labelledby="principles-title"
+    >
+      <h2 id="principles-title" className="main-principle-title">
+        <span className="decorative-line" aria-hidden="true"></span>
+        Our Guiding Principles
+      </h2>
       <div className="project-features-grid">
         {principles.map((principle, i) => (
-          <div key={i} className="project-feature">
+          <article key={i} className="project-feature">
             <h3>{principle.title}</h3>
             <p>{principle.desc}</p>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

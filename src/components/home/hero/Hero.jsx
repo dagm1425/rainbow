@@ -22,12 +22,6 @@ export default function Hero() {
           >
             Read More
           </Link>
-          {/* <button 
-            className="button button-secondary"
-            onClick={() => window.location.href = '/shop/men'}
-          >
-            Contact Us
-          </button> */}
         </div>
       </div>
     </section>
