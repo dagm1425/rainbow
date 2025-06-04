@@ -59,7 +59,7 @@ export default function Index() {
           <p>call us</p>
           <p>
             Mon-Fri from 9AM to 5PM <br />
-            +251 1 557 34 58
+            +251 1 557 34 58 / +251 911 20 20 81
           </p>
         </div>
         <div className="contact-item">
